@@ -1,0 +1,93 @@
+/**
+ * OpenMax Design Tokens
+ * 颜色变量桥接到 CSS 变量，支持暗色模式自动切换
+ * 使用时在项目的 uni.scss 中 @use 引入，或直接复制修改
+ *
+ * 使用方式：
+ * 1. 在 App.vue 中引入 theme.scss: @import '@om/uni-base/src/styles/theme.scss';
+ * 2. 在 uni.scss 中引入本文件: @import '@om/uni-base/src/styles/tokens.scss';
+ */
+
+// 品牌色 → CSS 变量桥接
+$om-primary-color: var(--om-brand-dark);
+$om-brand-dark:    var(--om-brand-dark);
+$om-brand-700:     var(--om-brand-700);
+$om-brand:         var(--om-brand);
+$om-brand-light:   var(--om-brand-light);
+$om-gradient-from: var(--om-gradient-from);
+$om-gradient-to:   var(--om-gradient-to);
+$om-brand-bg:      var(--om-brand-bg);
+$om-brand-bg-light:var(--om-brand-bg-light);
+
+// 中性灰 → CSS 变量桥接
+$om-gray-900: var(--om-gray-900);
+$om-gray-800: var(--om-gray-800);
+$om-gray-700: var(--om-gray-700);
+$om-gray-600: var(--om-gray-600);
+$om-gray-500: var(--om-gray-500);
+$om-gray-400: var(--om-gray-400);
+$om-gray-300: var(--om-gray-300);
+$om-gray-200: var(--om-gray-200);
+$om-gray-100: var(--om-gray-100);
+$om-gray-50:  var(--om-gray-50);
+
+// 功能色 → CSS 变量桥接
+$om-surface:        var(--om-surface);
+$om-surface-dim:    var(--om-surface-dim);
+$om-page-bg-color:  var(--om-page-bg);
+$om-warning:        var(--om-warning);
+$om-warning-bg:     var(--om-warning-bg);
+$om-warning-dark:   var(--om-warning-dark);
+
+// 渐变 → CSS 变量桥接
+$om-gradient-brand:     var(--om-gradient-brand);
+$om-gradient-brand-alt: var(--om-gradient-brand-alt);
+$om-gradient-progress:  var(--om-gradient-progress);
+
+// 字号（不随主题变化）
+$om-text-xs:   20rpx;
+$om-text-sm:   22rpx;
+$om-text-base: 24rpx;
+$om-text-md:   26rpx;
+$om-text-lg:   28rpx;
+$om-text-xl:   30rpx;
+$om-text-2xl:  32rpx;
+$om-text-3xl:  34rpx;
+$om-text-4xl:  38rpx;
+$om-text-5xl:  44rpx;
+
+// 间距（不随主题变化）
+$om-space-1:  4rpx;
+$om-space-2:  8rpx;
+$om-space-3:  12rpx;
+$om-space-4:  16rpx;
+$om-space-5:  20rpx;
+$om-space-6:  24rpx;
+$om-space-7:  28rpx;
+$om-space-8:  32rpx;
+$om-space-10: 40rpx;
+$om-space-12: 48rpx;
+$om-space-16: 64rpx;
+$om-space-20: 80rpx;
+
+// 圆角（不随主题变化）
+$om-radius-sm:   8rpx;
+$om-radius-md:   12rpx;
+$om-radius-lg:   16rpx;
+$om-radius-xl:   20rpx;
+$om-radius-2xl:  24rpx;
+$om-radius-3xl:  40rpx;
+$om-radius-4xl:  48rpx;
+$om-radius-full: 50%;
+$om-radius-pill: 999rpx;
+
+// 阴影 → CSS 变量桥接
+$om-shadow-card:    var(--om-shadow-card);
+$om-shadow-card-lg: var(--om-shadow-card-lg);
+$om-shadow-card-light: var(--om-shadow-card-light);
+$om-shadow-bottom:  var(--om-shadow-bottom);
+
+// 边框（引用 CSS 变量）
+$om-border-light:  1rpx solid var(--om-gray-200);
+$om-border-normal: 2rpx solid var(--om-gray-200);
+$om-border-input:  2rpx solid var(--om-gray-300);

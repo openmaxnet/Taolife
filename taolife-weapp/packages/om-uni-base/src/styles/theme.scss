@@ -1,0 +1,129 @@
+/**
+ * OpenMax Theme — CSS 变量定义
+ * 浅色（默认）+ 暗色（@media prefers-color-scheme）
+ *
+ * 使用方式：在 App.vue 的 <style> 中引入
+ * @import '@om/uni-base/src/styles/theme.scss';
+ */
+
+// 浅色（默认）
+page {
+  // 品牌色
+  --om-brand: #059669;
+  --om-brand-dark: #064E3B;
+  --om-brand-700: #047857;
+  --om-brand-light: #10B981;
+  --om-brand-bg: #ECFDF5;
+  --om-brand-bg-light: #F0FDF4;
+  --om-brand-alpha-4: rgba(5, 150, 105, 0.04);
+  --om-brand-alpha-6: rgba(5, 150, 105, 0.06);
+  --om-brand-alpha-8: rgba(5, 150, 105, 0.08);
+  --om-brand-alpha-10: rgba(5, 150, 105, 0.1);
+  --om-brand-alpha-15: rgba(5, 150, 105, 0.15);
+  --om-brand-alpha-20: rgba(5, 150, 105, 0.2);
+  --om-brand-alpha-35: rgba(5, 150, 105, 0.35);
+  --om-brand-alpha-40: rgba(5, 150, 105, 0.4);
+
+  // 渐变色
+  --om-gradient-from: #2D5A27;
+  --om-gradient-to: #4F7942;
+
+  // 中性灰
+  --om-gray-50: #F9FAFB;
+  --om-gray-100: #F5F5F5;
+  --om-gray-200: #F3F4F6;
+  --om-gray-300: #E5E7EB;
+  --om-gray-400: #D1D5DB;
+  --om-gray-500: #9CA3AF;
+  --om-gray-600: #6B7280;
+  --om-gray-700: #4B5563;
+  --om-gray-800: #374151;
+  --om-gray-900: #1F2937;
+
+  // 表面色
+  --om-surface: #ffffff;
+  --om-surface-dim: #F3F7F2;
+  --om-page-bg: #f7f8fa;
+
+  // 功能色
+  --om-warning: #F59E0B;
+  --om-warning-bg: #FEF3C7;
+  --om-warning-dark: #D97706;
+  --om-warning-alpha-10: rgba(245, 158, 11, 0.1);
+
+  // 渐变
+  --om-gradient-brand: linear-gradient(135deg, #2D5A27, #4F7942);
+  --om-gradient-brand-alt: linear-gradient(135deg, #059669, #2D5A27);
+  --om-gradient-progress: linear-gradient(90deg, #2D5A27, #4F7942);
+
+  // 阴影
+  --om-shadow-card: 0 2rpx 12rpx rgba(45, 90, 39, 0.08);
+  --om-shadow-card-lg: 0 4rpx 16rpx rgba(45, 90, 39, 0.12);
+  --om-shadow-card-light: 0 2rpx 12rpx rgba(45, 90, 39, 0.05);
+  --om-shadow-bottom: 0 -2rpx 8rpx rgba(0, 0, 0, 0.08);
+
+  // TDesign 品牌色覆盖
+  --td-brand-color: var(--om-brand);
+  --td-brand-color-active: var(--om-brand-700);
+  --td-brand-color-disabled: var(--om-brand-alpha-40);
+  --td-brand-color-light: var(--om-brand-bg);
+}
+
+// 暗色
+@media (prefers-color-scheme: dark) {
+  page {
+    // 品牌色
+    --om-brand: #34d399;
+    --om-brand-dark: #6ee7b7;
+    --om-brand-700: #10b981;
+    --om-brand-light: #6ee7b7;
+    --om-brand-bg: rgba(52, 211, 153, 0.08);
+    --om-brand-bg-light: rgba(52, 211, 153, 0.05);
+    --om-brand-alpha-4: rgba(52, 211, 153, 0.04);
+    --om-brand-alpha-6: rgba(52, 211, 153, 0.06);
+    --om-brand-alpha-8: rgba(52, 211, 153, 0.08);
+    --om-brand-alpha-10: rgba(52, 211, 153, 0.1);
+    --om-brand-alpha-15: rgba(52, 211, 153, 0.15);
+    --om-brand-alpha-20: rgba(52, 211, 153, 0.2);
+    --om-brand-alpha-35: rgba(52, 211, 153, 0.35);
+    --om-brand-alpha-40: rgba(52, 211, 153, 0.4);
+
+    // 渐变色
+    --om-gradient-from: #065f46;
+    --om-gradient-to: #047857;
+
+    // 中性灰
+    --om-gray-50: #1a1a1a;
+    --om-gray-100: #1e1e1e;
+    --om-gray-200: #2a2a2a;
+    --om-gray-300: #333333;
+    --om-gray-400: #4a4a4a;
+    --om-gray-500: #6b6b6b;
+    --om-gray-600: #8b8b8b;
+    --om-gray-700: #ababab;
+    --om-gray-800: #d4d4d4;
+    --om-gray-900: #f0f0f0;
+
+    // 表面色
+    --om-surface: #1e1e1e;
+    --om-surface-dim: #252525;
+    --om-page-bg: #111111;
+
+    // 功能色
+    --om-warning: #FBBF24;
+    --om-warning-bg: rgba(251, 191, 36, 0.15);
+    --om-warning-dark: #F59E0B;
+    --om-warning-alpha-10: rgba(251, 191, 36, 0.1);
+
+    // 渐变
+    --om-gradient-brand: linear-gradient(135deg, #065f46, #047857);
+    --om-gradient-brand-alt: linear-gradient(135deg, #10b981, #065f46);
+    --om-gradient-progress: linear-gradient(90deg, #065f46, #047857);
+
+    // 阴影
+    --om-shadow-card: 0 2rpx 12rpx rgba(0, 0, 0, 0.3);
+    --om-shadow-card-lg: 0 4rpx 16rpx rgba(0, 0, 0, 0.4);
+    --om-shadow-card-light: 0 2rpx 12rpx rgba(0, 0, 0, 0.2);
+    --om-shadow-bottom: 0 -2rpx 8rpx rgba(0, 0, 0, 0.3);
+  }
+}

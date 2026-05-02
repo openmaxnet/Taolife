@@ -1,0 +1,434 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "道养生活",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"scrollIndicator": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/wisdom/food/index",
+			"style": {
+				"navigationBarTitleText": "药食库",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/ai/chat/index",
+			"style": {
+				"navigationBarTitleText": "AI智能问答",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false,
+				"disableScroll": true
+			}
+		},
+		{
+			"path": "pages/plan/index",
+			"style": {
+				"navigationBarTitleText": "调理方案",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/identity/user/index",
+			"style": {
+				"navigationBarTitleText": "个人档案",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/wisdom/food/FoodDetail",
+			"style": {
+				"navigationBarTitleText": "食材详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/wisdom/exercise/index",
+			"style": {
+				"navigationBarTitleText": "运动养生",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/wisdom/exercise/ExerciseDetail",
+			"style": {
+				"navigationBarTitleText": "运动详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/PlanHistory",
+			"style": {
+				"navigationBarTitleText": "方案历史",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/Tasks",
+			"style": {
+				"navigationBarTitleText": "每日任务",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/FoodPlanDetail",
+			"style": {
+				"navigationBarTitleText": "饮食方案详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/ExercisePlanDetail",
+			"style": {
+				"navigationBarTitleText": "运动方案详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/AcupointPlanDetail",
+			"style": {
+				"navigationBarTitleText": "穴位按摩详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/MeridianPlanDetail",
+			"style": {
+				"navigationBarTitleText": "经络调理详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/LifestylePlanDetail",
+			"style": {
+				"navigationBarTitleText": "生活起居详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/details/PlanHistoryDetail",
+			"style": {
+				"navigationBarTitleText": "方案详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/square/index",
+			"style": {
+				"navigationBarTitleText": "方案广场",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/plan/square/SquareShare",
+			"style": {
+				"navigationBarTitleText": "分享方案",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor"
+			}
+		},
+		{
+			"path": "pages/identity/setting/index",
+			"style": {
+				"navigationBarTitleText": "系统设置",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "#FFFFFF00",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/identity/agreement/AgreementDetail",
+			"style": {
+				"navigationBarTitleText": "详情",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/identity/setting/AccountCancel",
+			"style": {
+				"navigationBarTitleText": "账号注销",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/identity/user/ProfileEdit",
+			"style": {
+				"navigationBarTitleText": "编辑资料",
+				"navigationStyle": "custom",
+				"navigationBarBackgroundColor": "@navBgColor",
+				"enablePullDownRefresh": false
+			}
+		}
+	],
+	"subPackages": [
+		{
+			"root": "pages/wisdom/constitution",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "体质评估",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "AssessHistory",
+					"style": {
+						"navigationBarTitleText": "测评历史",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "AssessQuestionnaire",
+					"style": {
+						"navigationBarTitleText": "测评问卷",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/wisdom/meridian",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "全身经络",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "MeridianDetail",
+					"style": {
+						"navigationBarTitleText": "经络详情",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "AcupointDetail",
+					"style": {
+						"navigationBarTitleText": "穴位详情",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/wisdom/article",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "养生经络",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "ArticleDetail",
+					"style": {
+						"navigationBarTitleText": "文章详情",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/fee/checkin",
+			"pages": [
+				{
+					"path": "calendar/index",
+					"style": {
+						"navigationBarTitleText": "打卡日历",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/fee/points",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "积分商城",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "ExchangeRecord",
+					"style": {
+						"navigationBarTitleText": "兑换记录",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/wisdom/solarterm",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "二十四节气",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "SolarTermDetail",
+					"style": {
+						"navigationBarTitleText": "节气详情",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/fee/member",
+			"pages": [
+				{
+					"path": "MemberCenter",
+					"style": {
+						"navigationBarTitleText": "会员中心",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "OrderList",
+					"style": {
+						"navigationBarTitleText": "我的订单",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "OrderDetail",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "GrowthRecord",
+					"style": {
+						"navigationBarTitleText": "成长记录",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		},
+		{
+			"root": "pages/identity/user/preference",
+			"pages": [
+				{
+					"path": "index",
+					"style": {
+						"navigationBarTitleText": "健康偏好",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				},
+				{
+					"path": "Edit",
+					"style": {
+						"navigationBarTitleText": "编辑偏好",
+						"navigationStyle": "custom",
+						"navigationBarBackgroundColor": "@navBgColor",
+						"enablePullDownRefresh": false
+					}
+				}
+			]
+		}
+	],
+	"preloadRule": {
+		"pages/index/index": {
+			"network": "all",
+			"packages": [
+				"pages/wisdom/constitution",
+				"pages/wisdom/meridian",
+				"pages/wisdom/article",
+				"pages/fee/checkin"
+			]
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "@navTxtStyle",
+		"navigationBarBackgroundColor": "@navBgColor",
+		"backgroundColor": "@bgColor"
+	}
+}

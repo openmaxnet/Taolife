@@ -1,0 +1,166 @@
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+
+/* ==============================
+   TaoLife Design Tokens
+   ============================== */
+
+// 品牌色（Brand） → CSS 变量桥接，跟随暗色模式自动切换
+$tf-primary-color: var(--tf-brand-dark);
+$tf-brand-dark:    var(--tf-brand-dark);
+$tf-brand-700:     var(--tf-brand-700);
+$tf-brand:         var(--tf-brand);
+$tf-brand-light:   var(--tf-brand-light);
+$tf-gradient-from: var(--tf-gradient-from);
+$tf-gradient-to:   var(--tf-gradient-to);
+$tf-brand-bg:      var(--tf-brand-bg);
+$tf-brand-bg-light:var(--tf-brand-bg-light);
+
+// 中性灰（Gray Scale） → CSS 变量桥接
+$tf-gray-900: var(--tf-gray-900);
+$tf-gray-800: var(--tf-gray-800);
+$tf-gray-700: var(--tf-gray-700);
+$tf-gray-600: var(--tf-gray-600);
+$tf-gray-500: var(--tf-gray-500);
+$tf-gray-400: var(--tf-gray-400);
+$tf-gray-300: var(--tf-gray-300);
+$tf-gray-200: var(--tf-gray-200);
+$tf-gray-100: var(--tf-gray-100);
+$tf-gray-50:  var(--tf-gray-50);
+
+// 功能色 → CSS 变量桥接
+$tf-surface:        var(--tf-surface);
+$tf-surface-dim:    var(--tf-surface-dim);
+$tf-page-bg-color:  var(--tf-page-bg);
+$tf-warning:        var(--tf-warning);
+$tf-warning-bg:     var(--tf-warning-bg);
+$tf-warning-dark:   var(--tf-warning-dark);
+
+// 渐变 → CSS 变量桥接
+$tf-gradient-brand:     var(--tf-gradient-brand);
+$tf-gradient-brand-alt: var(--tf-gradient-brand-alt);
+$tf-gradient-progress:  var(--tf-gradient-progress);
+
+// 字号（优化后 - 建立清晰的视觉层级）
+$tf-text-xs:   20rpx;               // 标签、徽标
+$tf-text-sm:   22rpx;               // 次要正文、辅助说明
+$tf-text-base: 24rpx;               // 标准正文（最高频）
+$tf-text-md:   26rpx;               // 卡片标题、正文强调
+$tf-text-lg:   28rpx;               // 重要正文、列表标题
+$tf-text-xl:   30rpx;               // 中标题
+$tf-text-2xl:  32rpx;               // 区块标题
+$tf-text-3xl:  34rpx;               // 页面主标题（优化，原36rpx）
+$tf-text-4xl:  38rpx;               // 大数字、大标题（优化，原40rpx）
+$tf-text-5xl:  44rpx;               // 超大统计数字（优化，原48rpx）
+
+// 间距
+$tf-space-1:  4rpx;                 // 微间距
+$tf-space-2:  8rpx;                 // 最小间距
+$tf-space-3:  12rpx;                // 紧凑间距
+$tf-space-4:  16rpx;                // 小间距
+$tf-space-5:  20rpx;                // 中小间距
+$tf-space-6:  24rpx;                // 次要内边距
+$tf-space-7:  28rpx;                // 卡片内边距变体
+$tf-space-8:  32rpx;                // 标准页边距/卡片内边距（最高频）
+$tf-space-10: 40rpx;                // 大区间距
+$tf-space-12: 48rpx;                // 英雄区间距
+$tf-space-16: 64rpx;                // 超大间距
+$tf-space-20: 80rpx;                // 底部留白
+
+// 圆角
+$tf-radius-sm:   8rpx;              // 标签、徽标
+$tf-radius-md:   12rpx;             // 紧凑卡片
+$tf-radius-lg:   16rpx;             // 小卡片、缩略图
+$tf-radius-xl:   20rpx;             // 中卡片
+$tf-radius-2xl:  24rpx;             // 标准卡片（最高频）
+$tf-radius-3xl:  40rpx;             // 胶囊按钮
+$tf-radius-4xl:  48rpx;             // 大胶囊按钮
+$tf-radius-full: 50%;               // 圆形头像
+$tf-radius-pill: 999rpx;            // 全胶囊
+
+// 阴影 → CSS 变量桥接
+$tf-shadow-card:    var(--tf-shadow-card);
+$tf-shadow-card-lg: var(--tf-shadow-card-lg);
+$tf-shadow-card-light: var(--tf-shadow-card-light);
+$tf-shadow-bottom:  var(--tf-shadow-bottom);
+
+// 边框（引用 CSS 变量）
+$tf-border-light:  1rpx solid var(--tf-gray-200);
+$tf-border-normal: 2rpx solid var(--tf-gray-200);
+$tf-border-input:  2rpx solid var(--tf-gray-300);
+
+/* 行为相关颜色 */
+$uni-color-primary: #007aff;
+$uni-color-success: #4cd964;
+$uni-color-warning: #f0ad4e;
+$uni-color-error: #dd524d;
+
+/* 文字基本颜色 */
+$uni-text-color: #333; // 基本色
+$uni-text-color-inverse: #fff; // 反色
+$uni-text-color-grey: #999; // 辅助灰色，如加载更多的提示信息
+$uni-text-color-placeholder: #808080;
+$uni-text-color-disable: #c0c0c0;
+
+/* 背景颜色 */
+$uni-bg-color: #fff;
+$uni-bg-color-grey: #f8f8f8;
+$uni-bg-color-hover: #f1f1f1; // 点击状态颜色
+$uni-bg-color-mask: rgba(0, 0, 0, 0.4); // 遮罩颜色
+
+/* 边框颜色 */
+$uni-border-color: #c8c7cc;
+
+/* 尺寸变量 */
+
+/* 文字尺寸 */
+$uni-font-size-sm: 12px;
+$uni-font-size-base: 14px;
+$uni-font-size-lg: 16;
+
+/* 图片尺寸 */
+$uni-img-size-sm: 20px;
+$uni-img-size-base: 26px;
+$uni-img-size-lg: 40px;
+
+/* Border Radius */
+$uni-border-radius-sm: 2px;
+$uni-border-radius-base: 3px;
+$uni-border-radius-lg: 6px;
+$uni-border-radius-circle: 50%;
+
+/* 水平间距 */
+$uni-spacing-row-sm: 5px;
+$uni-spacing-row-base: 10px;
+$uni-spacing-row-lg: 15px;
+
+/* 垂直间距 */
+$uni-spacing-col-sm: 4px;
+$uni-spacing-col-base: 8px;
+$uni-spacing-col-lg: 12px;
+
+/* 透明度 */
+$uni-opacity-disabled: 0.3; // 组件禁用态的透明度
+
+/* 文章场景相关 */
+$uni-color-title: #2c405a; // 文章标题颜色
+$uni-font-size-title: 20px;
+$uni-color-subtitle: #555; // 二级标题颜色
+$uni-font-size-subtitle: 18px;
+$uni-color-paragraph: #3f536e; // 文章段落颜色
+$uni-font-size-paragraph: 15px;
+
+/* 卡片阴影 */
+// $uni-card-shadow: 0 4rpx 16rpx rgba(45, 90, 39, 0.12);
+// $uni-card-shadow-sm: 0 2rpx 12rpx rgba(45, 90, 39, 0.08);

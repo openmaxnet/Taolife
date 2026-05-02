@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    
+    <!-- 使用 Spring Boot 的属性 -->
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n</Property>
+    </Properties>
+
+    <Appenders>
+        <!-- 控制台输出 -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!-- 文件输出 -->
+        <RollingFile name="MainLog" fileName="logs/main.log"
+                     filePattern="logs/main-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+
+        <!-- 调试日志 -->
+        <RollingFile name="DebugLog" fileName="logs/debug.log"
+                     filePattern="logs/debug-%d{yyyy-MM-dd}-%i.log">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="10"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <!-- 根日志级别 -->
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+        </Root>
+
+        <!-- Spring 框架日志 -->
+        <Logger name="org.springframework" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+        </Logger>
+        
+        <!-- Spring JDBC -->
+        <Logger name="org.springframework.jdbc" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+        </Logger>
+        
+        <!-- HikariCP 连接池 -->
+        <Logger name="com.zaxxer.hikari" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+        </Logger>
+        
+        <!-- MySQL Connector -->
+        <Logger name="com.mysql.cj" level="warn" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+        </Logger>
+
+        <!-- 应用日志 -->
+        <Logger name="com.taolife" level="debug" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="MainLog"/>
+            <AppenderRef ref="DebugLog"/>
+        </Logger>
+    </Loggers>
+</Configuration>

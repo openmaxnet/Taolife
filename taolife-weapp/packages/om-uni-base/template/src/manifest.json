@@ -1,0 +1,19 @@
+{
+  "name": "my-uni-app",
+  "appid": "",
+  "description": "基于 @om/uni-base 的 uni-app 项目",
+  "versionName": "0.1.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "mp-weixin": {
+    "appid": "",
+    "darkmode": true,
+    "themeLocation": "theme.json",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "minified": true
+    },
+    "usingComponents": true
+  }
+}

@@ -1,0 +1,157 @@
+server:
+  port: 35515
+
+spring:
+  application:
+    name: taolife
+  profiles:
+    active: dev
+  # 日志配置
+  output:
+    ansi:
+      enabled: always
+  # 排除默认日志配置，使用 log4j2
+  main:
+    log-startup-info: false
+  # 开启虚拟线程（Java 21+）
+  threads:
+    virtual:
+      enabled: true
+
+# Actuator 管理：禁用 HTTP 端点，仅使用 MeterRegistry Bean
+management:
+  server:
+    port: -1
+  endpoints:
+    web:
+      exposure:
+        include: ""
+  otlp:
+    metrics:
+      export:
+        url: http://localhost:4317/v1/metrics
+        step: 30s
+        resource-attributes:
+          service.name: taolife-server
+
+# 日志配置：覆盖默认的时间格式
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %clr(%5p) %clr([%t]){faint} %clr(%-40.40logger{36}){cyan} %clr(:){faint} %m%n%wEx"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"
+
+taolife:
+  logging:
+    enabled: true
+    include-headers: false
+    include-response-body: true
+    exclude-paths:
+      - "/actuator/**"
+  # 验证码配置
+  captcha:
+    image:
+      length: 5
+      expire-seconds: 300
+    sms:
+      length: 6
+      expire-seconds: 300
+  # 微信小程序配置
+  wx-miniprogram:
+    app-id: YOUR_WX_APPID
+    app-secret: YOUR_WX_APP_SECRET
+  # 安全配置
+  security:
+    # 是否启用安全配置（默认开启）
+    enabled: true
+    jwt:
+      secret-key: YOUR_JWT_SECRET
+      # Token过期时间：7天 = 604800秒
+      expiration: 604800
+      # JWT黑名单前缀
+      jwt-blacklist-prefix: "jwt:blacklist:"
+      # AccessToken前缀
+      access-token-prefix: "taolife:oauth:access_tokens:user:"
+      # RefreshToken前缀
+      refresh-token-prefix: "taolife:oauth:refresh_tokens:user:"
+      # Token过期时间（秒）- 7天
+      token-expire-seconds: 604800
+      # Token过期时间分组
+      token:
+        # AccessToken过期时间（秒）- 1小时
+        access-expire-seconds: 3600
+        # RefreshToken过期时间（秒）- 30天
+        refresh-expire-seconds: 2592000
+      # 用户会话分组
+      user:
+        # 用户信息过期时间（秒）- 1小时
+        info-expire-seconds: 3600
+        # 用户会话过期时间（秒）- 7天
+        session-expire-seconds: 604800
+        # 用户积分过期时间（秒）- 1小时
+        points-expire-seconds: 3600
+      # 微信相关分组
+      wx:
+        # 微信AccessToken过期时间（秒）- 2小时
+        access-token-expire-seconds: 7200
+        # 微信SessionKey过期时间（秒）- 30分钟
+        session-key-expire-seconds: 1800
+      # 验证码分组
+      captcha:
+        # 短信验证码过期时间（秒）- 5分钟
+        sms-expire-seconds: 300
+        # 图形验证码过期时间（秒）- 5分钟
+        code-expire-seconds: 300
+        # 验证码发送频率限制时间（秒）- 60秒
+        send-limit-seconds: 60
+      # 限流分组
+      rate-limit:
+        # 限流时间窗口（秒）
+        seconds: 60
+        # IP维度限流次数（未登录请求）
+        ip-limit: 60
+        # 用户维度限流次数（已登录请求）
+        user-limit: 120
+        # 认证接口限流次数（/auth/ 路径）
+        auth-limit: 10
+      # API加密加签配置
+      encrypt:
+        # 是否启用（默认关闭，需前后端同步开启）
+        enabled: false
+        # 仅验签模式（不加密请求/响应体，只验证签名）
+        sign-only: false
+        # HMAC签名密钥（启用加密时必须配置）
+        hmac-secret: "YOUR_HMAC_SECRET"
+        # Nonce过期时间（秒）
+        nonce-expire-seconds: 300
+        # 时间戳容忍秒数
+        timestamp-tolerance: 300
+      # 分布式锁分组
+      lock:
+        # 过期时间（秒）- 30秒
+        expire-seconds: 30
+  # Redis配置（保留用于Spring Data Redis自动配置）
+  redis:
+  # 微信小程序API配置
+  wx-api:
+    # 微信接口基地址
+    api-url: "https://api.weixin.qq.com"
+    # code2Session接口地址
+    code-2-session-url: "/sns/jscode2session"
+    # 获取AccessToken接口地址
+    get-access-token-url: "/cgi-bin/token"
+    # 获取用户手机号接口地址
+    get-phone-number-url: "/wxa/business/getuserphonenumber"
+    # 获取小程序码接口地址
+    get-wxa-code-url: "/wxa/getwxacode"
+    # 获取小程序二维码接口地址
+    get-qr-code-url: "/wxa/getwxacodeunlimit"
+    # 发送模板消息接口地址
+    send-template-message-url: "/cgi-bin/message/template/send"
+  # AI配置已迁移到数据库，通过taolife-admin前端进行配置管理
+  # 加密配置（API Key等敏感字段使用AES-256-GCM加密存储）
+  encryption:
+    # AES-256-GCM加密密钥（Base64编码，32字节）
+    # 生产环境建议通过环境变量 TAOLIFE_ENCRYPTION_KEY 覆盖此配置
+    aes-key: YOUR_AES_KEY
+    # 是否启用加密（false时返回明文）
+    enabled: true

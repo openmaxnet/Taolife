@@ -1,0 +1,16 @@
+{
+  "name": "@om/uni-base",
+  "version": "0.1.0",
+  "description": "OpenMax uni-app 基础框架 — 通用 request、auth、composables、组件、样式",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "files": ["src"],
+  "peerDependencies": {
+    "vue": "^3.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0"
+  },
+  "license": "MIT"
+}

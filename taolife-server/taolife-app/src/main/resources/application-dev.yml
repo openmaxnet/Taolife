@@ -1,0 +1,110 @@
+spring:
+  application:
+    name: taolife
+  # 日志配置
+  output:
+    ansi:
+      enabled: always
+  # CORS 配置
+  web:
+    cors:
+      allowed-origins: "http://localhost:9980"
+      allowed-methods: "GET,POST,OPTIONS"
+      allowed-headers: "*"
+      allow-credentials: true
+      max-age: 3600
+  # 数据源配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/taolife_dev?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=Asia/Shanghai&useLegacyDatetimeCode=false
+    username: root
+    password: your_password
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 20
+      idle-timeout: 30000
+      pool-name: TaoLifeHikariCP
+      connection-timeout: 10000
+      initialization-fail-timeout: 1000
+      connection-init-sql: SELECT 1
+      connection-test-query: SELECT 1
+      validation-timeout: 5000
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password: your_password
+      database: 8
+
+# Milvus向量数据库配置
+milvus:
+  host: localhost
+  port: 19530
+  database: default
+  collection-name: health_documents
+  embedding-dimension: 1024
+  username: root
+  password: your_password
+
+mybatis-flex:
+  mapper-locations: classpath*:/mapper/**/*Mapper.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.log4j2.Log4j2Impl
+  global-config:
+    print-banner: true
+
+# 日志级别配置
+logging:
+  level:
+    io.milvus: INFO
+
+# management:
+#   endpoint:
+#     health:
+#       show-details: always
+#   endpoints.web.exposure.include: health,info,metrics,prometheus
+
+# 开发环境禁用 OTLP 导出（无 Collector）
+management:
+  otlp:
+    metrics:
+      export:
+        enabled: false
+
+# 安全配置
+taolife:
+  security:
+    # JWT相关配置
+    jwt:
+      # JWT密钥，用于签名和验证JWT令牌（必须配置）
+      # 建议使用足够长且随机的字符串
+      secret-key: YOUR_JWT_SECRET
+      # JWT令牌过期时间（单位：毫秒）
+      # 默认值：6小时 = 6 * 60 * 60 * 1000 = 14400000
+      expiration: 14400000
+  cos:
+    secret-id: YOUR_COS_SECRET_ID
+    secret-key: YOUR_COS_SECRET_KEY
+    region: ap-hongkong
+    bucket-name: YOUR_BUCKET_NAME
+    domain: https://YOUR_BUCKET_NAME.cos.ap-hongkong.myqcloud.com
+    file-path: uploads
+    max-file-size: 10485760
+    allowed-extensions:
+      - .jpg
+      - .jpeg
+      - .png
+      - .gif
+      - .pdf
+      - .doc
+      - .docx
+  # 微信支付配置
+  wx-pay:
+    enabled: false
+    mch-id: ""
+    api-v3-key: ""
+    private-key-path: ""
+    merchant-serial-number: ""
+    notify-url: ""
+    app-id: YOUR_WX_APPID

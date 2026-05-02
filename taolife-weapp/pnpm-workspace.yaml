@@ -1,0 +1,9 @@
+packages:
+  - 'packages/*'
+onlyBuiltDependencies:
+  - '@parcel/watcher'
+  - '@uni-helper/unocss-preset-uni'
+  - core-js
+  - core-js-pure
+  - cos-wx-sdk-v5
+  - esbuild
